@@ -54,7 +54,20 @@ var orm = {
             cb(result);
         });
 
-    }
+    },
+    delete: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+    
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+    
+          cb(result);
+        });
+      }
 }
 
 //helper function to iterate and determine how many question marks are necessary for the values

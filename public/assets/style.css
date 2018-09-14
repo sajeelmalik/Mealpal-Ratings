@@ -9,8 +9,14 @@
     opacity: 0.9;   
 
 }
+.uk-container{
+    background-color: rgba(233, 104, 104, 0.199);
+    border-radius: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
 
-h1, h2{
+h1, h2, h3{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
@@ -42,7 +48,7 @@ label{
 }
 
 .uk-card:hover{
-    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.315);
+    /* box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.315); */
     background-color: rgba(255, 255, 255, 0.116);
     transition: .3s ease-in-out;
 }
@@ -52,4 +58,9 @@ label{
     background-color:#F1FBFD;
     padding: 1px 5px 1px 5px;
     border-radius: 10px;
+}
+
+#footer{
+    margin-bottom: 0;
+    bottom:0;
 }
