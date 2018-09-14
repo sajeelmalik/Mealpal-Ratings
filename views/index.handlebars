@@ -24,16 +24,16 @@
     </form>
     <button class="uk-button uk-button-danger uk-margin-auto" type="submit" id="create-meal">Add Meal</button>
     <hr class="uk-divider-icon uk-animation-scale-up">
-    <div class="uk-flex uk-flex-between">
+    <div class="uk-flex">
 
-        <div class="uk-card uk-card-body">
-            <h2 class = "uk-card-title">Meal Rejects!</h2>
+        <div class="uk-card uk-card-body uk-width-1-2 ">
+            <h2 class = "uk-card-title uk-text-center">Meal Rejects!</h2>
             <div>
                 {{#each meals}} {{#unless worth_it}} {{> meal-block worth_it=true}} {{/unless}} {{/each}}
             </div>
         </div>
-        <div class="uk-card uk-card-body">
-            <h2 class = "uk-card-title">Worth-it Winners!</h2>
+        <div class="uk-card uk-card-body uk-width-1-2 ">
+            <h2 class = "uk-card-title uk-text-center">Worth-it Winners!</h2>
             <div>
                 {{#each meals}} {{#if worth_it}} {{> meal-block worth_it=false}} {{/if}} {{/each}}
             </div>

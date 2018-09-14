@@ -2,19 +2,19 @@
 $(function() {
     $(".change-worth").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
+      var newWorth = $(this).data("newWorth");
   
-      var newSleepState = {
-        sleepy: newSleep
+      var newWorthState = {
+        worth_it: newWorth
       };
   
       // Send the PUT request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/meals/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: newWorthState
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("changed sleep to", newWorth);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -45,15 +45,15 @@ $(function() {
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    $(".delete-meal").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/cats/" + id, {
+      $.ajax("/api/meals/" + id, {
         type: "DELETE",
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted meal", id);
           // Reload the page to get the updated list
           location.reload();
         }

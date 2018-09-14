@@ -1,5 +1,6 @@
 <h4>
-	{{name}}
+	{{name}}</h4>
+    <span class="uk-label uk-label-success">{{flavor_rating}}</span>
     <span>
 	<button class="uk-button uk-button-danger change-worth" data-id="{{id}}" data-newWorth="{{worth_it}}">
 		{{#if worth_it}}It's worth it!{{else}}It's not worth it!{{/if}}
@@ -7,4 +8,4 @@
 
 	<button class="uk-button uk-button-danger delete-meal" data-id="{{this.id}}">DELETE!</button>
     </span>
-</h4>
+
