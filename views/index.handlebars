@@ -1,0 +1,28 @@
+<div id="home"> </div>
+<h1 class="uk-alert-danger uk-text-center uk-animation-slide-top uk-animation-slow uk-heading-primary" id="title">MEAL<span
+        id="bold">PAL</span> Ratings</h1>
+
+<div class="uk-container ">
+    <h2>Add a Meal</h2>
+
+    <form class="uk-form-stacked uk-grid" uk-grid>
+        <div class="uk-width-1-3@s">
+            <label for = "name">Meal Name</label>
+            <input class="uk-input" type="text" id="name" placeholder="Wonton Tofu Salad">
+        </div>
+        <div class="uk-width-1-3@s">
+            <label for = "restaurant">Restaurant</label>
+            <input class="uk-input" type="text" id="restaurant" placeholder="Eatsa">
+        </div>
+        <div class="uk-width-1-6@s">
+            <label for = "number">Flavor Rating: 1 to 10</label>
+            <input class="uk-input" type="number" step="0.1" id="rating" placeholder="7.5">
+        </div>
+        <div class="uk-width-1-6@s" id="worth_it">
+            <label><input class="uk-radio" type="radio" name="radio2" checked> Worth-It</label><br>
+            <label><input class="uk-radio" type="radio" name="radio2"> Not Worth-it</label></div>
+    </form>
+    <button class="uk-button uk-button-danger uk-margin-auto" type="submit">Add Meal</button>
+    <hr class="uk-divider-icon uk-animation-scale-up">
+
+</div>

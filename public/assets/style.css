@@ -1,0 +1,42 @@
+#home{
+    position: absolute;    
+    background-image: url("./brunch.jpg");
+    background-size: cover;
+    z-index: -1;
+    /* top: -50px; */
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.9;   
+
+}
+
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+h2{
+    color: #F1FBFD;
+}
+
+label{
+    font-family: 'Raleway', sans-serif;
+    color: #ED1C24;
+    font-weight: bold;
+    background-color:#F1FBFD;
+    padding: 1px 5px 1px 5px;
+    border-radius: 10px;
+}
+#bold{
+    font-weight: bold;
+}
+#title{
+    margin-top: 0px;
+    background-color: #ED1C24;
+    color: #F1FBFD;
+}
+
+.uk-button{
+    display: block;
+    margin-top: 20px;
+    background-color: #ED1C24;
+}
