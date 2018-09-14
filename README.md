@@ -5,7 +5,7 @@ Interactively add your favorite Mealpal meals from your favorite restaurants to 
 
 Mealpal Ratings is a Full-Stack Application! 
 
-* Powered by Javascript, node.js, Express.js, SQL, Object-relational Mapping (ORM), and Handlebars.js 
+* Powered by Javascript, node.js, Express.js, SQL, Object-relational Mapping (ORM), and Handlebars.js. Utilizes MVC and RESTful architecture.
 
 *Further design development underway.*
 
@@ -19,7 +19,7 @@ This is a full-stack application, so no need to download anything!
 ### Preview 
 <!-- take a picture of the image and add it into the readme  -->
 
-![Mealpal Ratings](./public/assets/preview.png  "Mealpal Ratings")
+![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/preview.PNG "Mealpal Ratings")
 <!-- ![Mealpal Ratings](./preview.gif  "Mealpal Ratings") -->
 *An example of the interface in action*
 
