@@ -18,7 +18,13 @@ router.get("/", function(req, res) {
       res.render("index", hbsObject);
     });
   });
-  
+
+  router.get("/api/meals", function(req, res) {
+    meal.selectAll(function(data) {
+      res.json(data);
+    });
+  });
+
   router.post("/api/meals", function(req, res) {
     meal.insertOne([
       "name", "restaurant", "flavor_rating", "worth_it"

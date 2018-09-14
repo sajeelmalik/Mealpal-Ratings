@@ -7,22 +7,36 @@
 
     <form class="uk-form-stacked uk-grid" uk-grid>
         <div class="uk-width-1-3@s">
-            <label for = "name">Meal Name</label>
-            <input class="uk-input" type="text" id="name" placeholder="Wonton Tofu Salad">
+            <label for="name">Meal Name</label>
+            <input class="uk-input" type="text" id="name" name="name" placeholder="Wonton Tofu Salad">
         </div>
         <div class="uk-width-1-3@s">
-            <label for = "restaurant">Restaurant</label>
-            <input class="uk-input" type="text" id="restaurant" placeholder="Eatsa">
+            <label for="restaurant">Restaurant</label>
+            <input class="uk-input" type="text" id="restaurant" name="restaurant" placeholder="Eatsa">
         </div>
         <div class="uk-width-1-6@s">
-            <label for = "number">Flavor Rating: 1 to 10</label>
-            <input class="uk-input" type="number" step="0.1" id="rating" placeholder="7.5">
+            <label for="number">Flavor Rating: 1 to 10</label>
+            <input class="uk-input" type="number" step="0.1" name="rating" id="rating" placeholder="7.5">
         </div>
         <div class="uk-width-1-6@s" id="worth_it">
-            <label><input class="uk-radio" type="radio" name="radio2" checked> Worth-It</label><br>
-            <label><input class="uk-radio" type="radio" name="radio2"> Not Worth-it</label></div>
+            <label><input class="uk-radio" type="radio" name="worthit" checked> Worth-It</label><br>
+            <label><input class="uk-radio" type="radio" name="worthit"> Not Worth-it</label></div>
     </form>
-    <button class="uk-button uk-button-danger uk-margin-auto" type="submit">Add Meal</button>
+    <button class="uk-button uk-button-danger uk-margin-auto" type="submit" id="create-meal">Add Meal</button>
     <hr class="uk-divider-icon uk-animation-scale-up">
+    <div class="uk-flex uk-flex-between">
 
+        <div class="uk-card uk-card-body">
+            <h2 class = "uk-card-title">Meal Rejects!</h2>
+            <div>
+                {{#each meals}} {{#unless worth_it}} {{> meal-block worth_it=true}} {{/unless}} {{/each}}
+            </div>
+        </div>
+        <div class="uk-card uk-card-body">
+            <h2 class = "uk-card-title">Worth-it Winners!</h2>
+            <div>
+                {{#each meals}} {{#if worth_it}} {{> meal-block worth_it=false}} {{/if}} {{/each}}
+            </div>
+        </div>
+    </div>
 </div>
