@@ -19,7 +19,8 @@ This is a full-stack application, so no need to download anything!
 ### Preview 
 <!-- take a picture of the image and add it into the readme  -->
 
-![Mealpal Ratings](./preview.gif  "Mealpal Ratings")
+![Mealpal Ratings](./public/assets/preview.png  "Mealpal Ratings")
+<!-- ![Mealpal Ratings](./preview.gif  "Mealpal Ratings") -->
 *An example of the interface in action*
 
 ## Technology Used
