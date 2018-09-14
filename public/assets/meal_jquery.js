@@ -2,8 +2,8 @@
 $(function() {
     $(".change-worth").on("click", function(event) {
       var id = $(this).data("id");
-      var newWorth = $(this).data("newWorth");
-  
+      var newWorth = $(this).data("worth");
+        console.log(newWorth);
       var newWorthState = {
         worth_it: newWorth
       };
@@ -14,26 +14,26 @@ $(function() {
         data: newWorthState
       }).then(
         function() {
-          console.log("changed sleep to", newWorth);
+          console.log("changed worth to", newWorth);
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    $("#create-meal").on("submit", function(event) {
+    $("#create-meal").on("click", function(event) {
       // preventDefault on a submit event
       event.preventDefault();
   
       var newMeal = {
         name: $("#name").val().trim(),
         restaurant: $("#restaurant").val().trim(),
-        rating: $("#rating").val().trim(),
+        flavor_rating: $("#flavor_rating").val().trim(),
         worth_it: $("[name=worthit]:checked").val().trim()
       };
-  
+      console.log(newMeal.worth_it)
       // Send the POST request.
-      $.ajax("/api/cats", {
+      $.ajax("/api/meals", {
         type: "POST",
         data: newMeal
       }).then(

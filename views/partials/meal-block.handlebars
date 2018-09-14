@@ -1,11 +1,13 @@
-<h4>
-	{{name}}</h4>
-    <span class="uk-label uk-label-success">{{flavor_rating}}</span>
-    <span>
-	<button class="uk-button uk-button-danger change-worth" data-id="{{id}}" data-newWorth="{{worth_it}}">
-		{{#if worth_it}}It's worth it!{{else}}It's not worth it!{{/if}}
-	</button>
 
-	<button class="uk-button uk-button-danger delete-meal" data-id="{{this.id}}">DELETE!</button>
-    </span>
+    <h4>
+        {{name}}, <em>{{restaurant}}</em> <span class="uk-label uk-label-success">Rating: {{flavor_rating}}</span>
+    </h4>
+    <div class="uk-flex uk-flex-center">
 
+        <button class="uk-button uk-button-danger change-worth" data-id="{{id}}" data-worth="{{worth_it}}">
+            {{#if worth_it}}It's worth it!{{else}}It's not worth it!{{/if}}
+        </button>
+
+        <button class="uk-button uk-button-danger delete-meal" data-id="{{this.id}}">DELETE!</button>
+
+    </div>

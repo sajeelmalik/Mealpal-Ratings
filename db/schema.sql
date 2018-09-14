@@ -12,7 +12,7 @@ CREATE table meals
     id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
     restaurant varchar(255) NOT NULL,
-    flavor_rating DECIMAL(2,1) NOT NULL,
+    flavor_rating DECIMAL NOT NULL,
 	worth_it BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 )

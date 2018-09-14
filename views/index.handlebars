@@ -16,25 +16,25 @@
         </div>
         <div class="uk-width-1-6@s">
             <label for="number">Flavor Rating: 1 to 10</label>
-            <input class="uk-input" type="number" step="0.1" name="rating" id="rating" placeholder="7.5">
+            <input class="uk-input" type="number" step="0.1" name="flavor_rating" id="flavor_rating" placeholder="7.5">
         </div>
         <div class="uk-width-1-6@s" id="worth_it">
-            <label><input class="uk-radio" type="radio" name="worthit" checked> Worth-It</label><br>
-            <label><input class="uk-radio" type="radio" name="worthit"> Not Worth-it</label></div>
+            <label><input class="uk-radio" type="radio" name="worthit" value="1" checked> Worth-It</label><br>
+            <label><input class="uk-radio" type="radio" name="worthit" value="0"> Not Worth-it</label></div>
     </form>
     <button class="uk-button uk-button-danger uk-margin-auto" type="submit" id="create-meal">Add Meal</button>
     <hr class="uk-divider-icon uk-animation-scale-up">
     <div class="uk-flex">
 
-        <div class="uk-card uk-card-body uk-width-1-2 ">
+        <div class="uk-card uk-card-body uk-width-1-2">
             <h2 class = "uk-card-title uk-text-center">Meal Rejects!</h2>
-            <div>
+            <div uk-scrollspy="target: > h4, div; cls:uk-animation-fade; delay: 200">
                 {{#each meals}} {{#unless worth_it}} {{> meal-block worth_it=true}} {{/unless}} {{/each}}
             </div>
         </div>
-        <div class="uk-card uk-card-body uk-width-1-2 ">
+        <div class="uk-card uk-card-body uk-width-1-2">
             <h2 class = "uk-card-title uk-text-center">Worth-it Winners!</h2>
-            <div>
+            <div uk-scrollspy="target: > h4, div; cls:uk-animation-fade; delay: 200">
                 {{#each meals}} {{#if worth_it}} {{> meal-block worth_it=false}} {{/if}} {{/each}}
             </div>
         </div>
