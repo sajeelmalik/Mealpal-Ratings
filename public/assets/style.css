@@ -22,6 +22,7 @@ h1, h2, h3{
 }
 h2{
     color: #F1FBFD;
+    transition: 0.4s ease-out;
 }
 
 label{
@@ -41,6 +42,15 @@ label{
     color: #F1FBFD;
 }
 
+h2:hover{
+    cursor: crosshair;
+}
+
+h2::selection{
+    color: #ED1C24;
+    background-color:#F1FBFD;
+}
+
 .uk-button{
     display: block;
     margin-top: 20px;
@@ -51,6 +61,13 @@ label{
     /* box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.315); */
     background-color: rgba(255, 255, 255, 0.116);
     transition: .3s ease-in-out;
+}
+
+.uk-card:hover > h2 {
+    /* background-color: rgba(237, 28, 35, 0.534);
+    border-radius: 30px; */
+    font-size: 30px;
+    text-shadow: 0px 0px 8px #ED1C24;
 }
 
 .uk-card h4{
@@ -64,3 +81,72 @@ label{
     margin-bottom: 0;
     bottom:0;
 }
+
+/* animations */
+.promptMeal {
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+  
+  .promptMeal::after, .promptMeal::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 10px;
+    bottom: -2px;
+    z-index: -1;
+  }
+  
+  .promptMeal:hover::after, .promptMeal:hover::before {
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: -2px;
+  }
+  
+  #addMeal::before{
+    -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: rgb(240, 89, 94);
+  }
+  
+  #addMeal::after {
+    /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+    -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: rgb(247, 42, 49);
+  }
+
+  
+  /* .uk-card-title {
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+  
+  .uk-card-title::after, .uk-card-title::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 10px;
+    bottom: -2px;
+    z-index: -1;
+  }
+  
+  .uk-card-title:hover::after, .uk-card-title:hover::before {
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: -2px;
+  }
+  
+  .uk-card-title::before{
+    -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+    background: rgb(240, 89, 94);
+  }
+  
+  .uk-card-title::after {
+    -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: rgb(247, 42, 49);
+  } */

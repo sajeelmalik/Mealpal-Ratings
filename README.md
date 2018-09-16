@@ -2,12 +2,12 @@
 
 Interactively add your favorite Mealpal meals from your favorite restaurants to see which meals are truly **worth it!** Rate your meals by how they taste and by whether or not their portion size and price is worthwhile; remember, a great tasting meal may not be worth it!
 
-
 Mealpal Ratings is a Full-Stack Application! 
 
 * Powered by Javascript, node.js, Express.js, SQL, Object-relational Mapping (ORM), and Handlebars.js. Utilizes MVC and RESTful architecture.
 
 *Further design development underway.*
+#
 
 ## Getting Started and Prerequisites
 
@@ -19,11 +19,17 @@ This is a full-stack application, so no need to download anything!
 ### Preview 
 <!-- take a picture of the image and add it into the readme  -->
 
+#### Landing Page
+
 ![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/preview.PNG "Mealpal Ratings")
-<!-- ![Mealpal Ratings](./preview.gif  "Mealpal Ratings") -->
+
+#### Demo
+
+![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/preview.GIF  "Mealpal Ratings")
 *An example of the interface in action*
 
-## Technology Used
+
+# Technology Used
 
 * **HTML5, CSS3** 
 * **Javascript** - the primary scripting logic powering the application
@@ -159,7 +165,7 @@ Utilizing the JSON - a data structure that presents an array of objects - that w
 # Learning Points
 <!-- Learning points where you would write what you thought was helpful -->
 * Express.js is a comprehensive node package that simplifies server functionality
-* Router development through Express.js
+* Router development through Express.js - while server functionality and execution is simpified, complex routing trees need to be delineated for proper funcitonality
 * Object-relational mapping presented enormous difficulties in the initial stages of development. While its utility is apparent, more advanved technology like Sequelize may expedite the process of creating relational frameworks. Having to utilize multiple callback functions precludes the ability to write clean, readable code.
 * Handlebars.js was a unique way to directly interact with JSON data using HTML.
 * Utilizing JawsDB for Heroku deployment
