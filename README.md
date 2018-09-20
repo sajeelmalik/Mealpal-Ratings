@@ -25,7 +25,7 @@ This is a full-stack application, so no need to download anything!
 
 #### Demo
 
-![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/preview.GIF  "Mealpal Ratings")
+![Mealpal Ratings](./public/assets/preview.gif  "Mealpal Ratings")
 *An example of the interface in action*
 
 
