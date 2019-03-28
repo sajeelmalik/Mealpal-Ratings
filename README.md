@@ -21,7 +21,7 @@ This is a full-stack application, so no need to download anything!
 
 #### Landing Page
 
-![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/preview.PNG "Mealpal Ratings")
+![Mealpal Ratings](https://raw.githubusercontent.com/sajeelmalik/Mealpal-Ratings/master/public/assets/previewv2.png "Mealpal Ratings")
 
 #### Demo
 

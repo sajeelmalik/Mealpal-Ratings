@@ -18,7 +18,7 @@ D9E5D6 - Light Gray */
   display: flex;
   background-image: url("./dinner.jpg");
   background-size: cover;
-  z-index: -1;
+  z-index: -20;
   /* top: -50px; */
   height: 90vh;
   width: 100%;
@@ -122,14 +122,16 @@ label{
   /* border-bottom: 5px solid  rgba(236, 60, 66, 0.95); */
 
 }
-
 #title{
+  position: relative;
     margin-top: 0px;
     background-color: #ED1C24;
     color: #F1FBFD;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.4) !important;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.4) !important;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.4) !important;
     margin-bottom: 0px;
-    z-index: 2;
+    z-index: 20;
 }
 
 h2:hover{
