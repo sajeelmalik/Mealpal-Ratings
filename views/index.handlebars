@@ -1,9 +1,40 @@
 <div id="home"> </div>
-<h1 class="uk-alert-danger uk-text-center uk-animation-slide-top uk-animation-slow uk-heading-primary" id="title">MEAL<span
-        id="bold">PAL</span> Ratings</h1>
+<h1 class="uk-alert-danger uk-text-center uk-heading-primary" id="title">MEAL<span class="bold">PAL</span> Ratings</h1>
+
+<div id="landing" uk-scrollspy="target: > h1; cls:uk-animation-fade; delay: 500">
+    <h1 class="bold landing-text " style="font-size: 3em">FIND THE BEST</h1>
+    <h1 class="bold landing-text ">MEALPAL MEALS</h1>
+    <h1 class="landing-text ">NEAR YOU</h1>
+    <div id="line" class="uk-animation-fade uk-animation-slow"></div>
+</div>
+<div id="instructions">
+    <h1 class="uk-text-center" id="worth-it">Is it <span><b style="font-weight: 700">WORTH</b></span> it?</h1>
+    <div id="instructions-content" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500">
+        <div class="instructions-list">
+            <i class="fas fa-hamburger"></i>
+            Flavor Rating
+            <div class="liner" class="uk-animation-fade uk-animation-slow">
+            <p class="subtitle">How tasty is it from 1 to 10?</p>
+            </div>
+        </div>
+        <div class="instructions-list">
+            <i class="fas fa-smile"></i>
+            Size
+            <div class="liner" class="uk-animation-fade uk-animation-slow">
+            <p class="subtitle">Is it filling and satisfying?</p>
+            </div>
+        </div>
+        <div class="instructions-list"><i class="fas fa-tags"></i>
+            Worth It?
+            <div class="liner" class="uk-animation-fade uk-animation-slow">
+            <p class="subtitle">Determine if it's WORTH IT! Tasty but small meals may not be!</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="uk-container ">
-    <h2 class = "promptMeal" id = "addMeal">Add a Meal</h2>
+    <h2 class="promptMeal" id="addMeal">Add a Meal</h2>
 
     <form class="uk-form-stacked uk-grid" uk-grid>
         <div class="uk-width-1-3@s">
@@ -27,19 +58,24 @@
     <div class="uk-flex">
 
         <div class="uk-card uk-card-body uk-width-1-2">
-            <h2 class = "uk-card-title uk-text-center">Meal Rejects!</h2>
+            <h2 class="uk-card-title uk-text-center">Meal Rejects!</h2>
             <div uk-scrollspy="target: > h4, div; cls:uk-animation-fade; delay: 200">
                 {{#each meals}} {{#unless worth_it}} {{> meal-block worth_it=true}} {{/unless}} {{/each}}
             </div>
         </div>
         <div class="uk-card uk-card-body uk-width-1-2">
-            <h2 class = "uk-card-title uk-text-center">Worth-it Winners!</h2>
+            <h2 class="uk-card-title uk-text-center">Worth-it Winners!</h2>
             <div uk-scrollspy="target: > h4, div; cls:uk-animation-fade; delay: 200">
                 {{#each meals}} {{#if worth_it}} {{> meal-block worth_it=false}} {{/if}} {{/each}}
             </div>
         </div>
     </div>
 </div>
-<footer>
-    <h3 class="uk-alert-danger uk-text-center uk-heading-secondary" id="footer" uk-scrollspy="uk-animation-slide-bottom uk-animation-slow "><a href="/api/meals">API Meals</a> | <a href="https://github.com/sajeelmalik/Mealpal-Ratings">Github Repo</a></h3>
+<footer class="uk-alert-danger" uk-scrollspy="uk-animation-slide-bottom uk-animation-slow " id="footer">
+    <h3 class=" uk-text-center uk-heading-secondary" id="api-links"><a href="/api/meals">API Meals</a><img
+            src="assets/meal-icon.png" id="meal-icon"><a href="https://github.com/sajeelmalik/Mealpal-Ratings">Github
+            Repo</a></h3>
+    <h4 class=" uk-text-center" id="additional-links"><a href="https://mealpal.com/">MealPal</a> | <a
+            href="https://mealpal.com/terms-and-conditions/">Terms of Use</a> | <a
+            href="https://mealpal.com/privacy-policy/">Privacy Policy</a></h3>
 </footer>
